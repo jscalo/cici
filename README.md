@@ -4,10 +4,10 @@ Cici is a cryptocurrency trading bot written in Python and based on the GDAX API
 
 I wrote a blog post about my experiences here that might help understand the project. You'll need a server to host it on.
 
-###Obvious Disclaimer
+### Obvious Disclaimer
 This project is provided without warranty. Hopefully you're not dumb enough to dump your life savings into a volatile speculative market. But if you do, I'm not responsible for the results. Unless you make a lot of dough. In that case you can buy me a beer.
 
-###Running Cici
+### Running Cici
 
 Requirements:
 * A GDAX API key
@@ -22,9 +22,9 @@ If you're not running it from `rc.local`, et al you might want to:
 
 `nohup python cici.py --configFile Example-config.json &`
 
-When cici starts up, it asks GDAX for your account balance. If there's money in your USD account it assumes you want to buy and will buy when the strategy allows. If there's no USD but there is coin in the cryptocurrency specified in the config file, it will assume you want to sell and will do so, again when the strategy allows. Be careful: cici uses all-or-nothing logic. If there's USD, it buys with all of it. If there's coin, it sells all of it.
+When Cici starts up, it asks GDAX for your account balance. If there's money in your USD account it assumes you want to buy and will buy when the strategy allows. If there's no USD but there is coin in the cryptocurrency specified in the config file, it will assume you want to sell and will do so, again when the strategy allows. Be careful: Cici uses all-or-nothing logic. If there's USD, it buys with all of it. If there's coin, it sells all of it.
 
-###The Config File
+### The Config File
 
 _productID_
 
@@ -32,11 +32,11 @@ The product that you want to trade on GDAX. E.g. "BTC-USD".
 
 _logFile_
 
-A path to a file that cici will log to.
+A path to a file that Cici will log to.
 
 _phone_
 
-The phone number that cici will SMS when a trade happens.
+The phone number that Cici will SMS when a trade happens.
 
 _maPeriodHours_
 
@@ -52,9 +52,9 @@ Setting `maWeight` to positive values above 1.0 will emphasize prices closer to 
 
 _maRatio_
 
-Setting `maRatio` to > 0.0 will keep cici from making a trade unless the values of the two short term averages have a variance of more than this ratio. For example, if `maRatio` is 0.002, cici is waiting to sell, and the ma1 value is 134.77 while the ma2 value is 134.55, cici won't sell even though ma1 > ma2 because (134.77 - 134.55)/134.77 = 0.0016 which is less than `maRatio` of 0.002. Using a `maRatio` may help avoid "whipsaw trading".
+Setting `maRatio` to > 0.0 will keep Cici from making a trade unless the values of the two short term averages have a variance of more than this ratio. For example, if `maRatio` is 0.002, Cici is waiting to sell, and the ma1 value is 134.77 while the ma2 value is 134.55, Cici won't sell even though ma1 > ma2 because (134.77 - 134.55)/134.77 = 0.0016 which is less than `maRatio` of 0.002. Using a `maRatio` may help avoid "whipsaw trading".
 
-###FAQ
+### FAQ
 
 **I'm confused. How do I get help?**
 
