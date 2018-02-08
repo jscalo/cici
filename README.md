@@ -2,7 +2,7 @@
 
 Cici is a cryptocurrency trading bot written in Python and based on the GDAX API. Based on parameters in a config file it can trade using lots of different strategies based on up to four simple or weighted moving averages. Cici will send an SMS (via Twilio) when it makes a trade.
 
-I wrote a blog post about my experiences here that might help understand the project. You'll need a server to host it on.
+I wrote a blog post about my experiences [here](https://blog.madebywindmill.com/my-foray-into-algorithmic-crypto-trading-beac9113de36) that might help understand the project. You'll need a server to host it on.
 
 ### Obvious Disclaimer
 This project is provided without warranty. Hopefully you're not dumb enough to dump your life savings into a volatile speculative market. But if you do, I'm not responsible for the results. Unless you make a lot of dough. In that case you can buy me a beer.
@@ -22,7 +22,9 @@ If you're not running it from `rc.local`, et al you might want to:
 
 `nohup python cici.py --configFile Example-config.json &`
 
-When Cici starts up, it asks GDAX for your account balance. If there's money in your USD account it assumes you want to buy and will buy when the strategy allows. If there's no USD but there is coin in the cryptocurrency specified in the config file, it will assume you want to sell and will do so, again when the strategy allows. Be careful: Cici uses all-or-nothing logic. If there's USD, it buys with all of it. If there's coin, it sells all of it.
+When Cici starts up, it asks GDAX for your account balance. If there's money in your USD account it assumes you want to buy and will buy when the strategy allows. If there's no USD but there is coin in the cryptocurrency specified in the config file, it will assume you want to sell and will do so, again when the strategy allows.
+
+**Be careful: Cici uses all-or-nothing logic. If there's USD, it buys with all of it. If there's coin, it sells all of it.**
 
 ### The Config File
 
