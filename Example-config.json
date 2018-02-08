@@ -1,0 +1,15 @@
+{
+	"productID": "BTC-USD",
+	"logFile": "/cici/Example.log",
+	"phone": "13105551212",
+	"ma1Count": 5,
+	"ma2Count": 10,
+	"ma3Count": null,
+	"ma4Count": null,
+	"maPeriodHours": 4,
+	"maWeight": 1.0,
+	"maRatio": 0.002,
+	"apiKey": "<your-gdax-api-key>",
+	"apiSecret": "<your-gdax-api-secret>",
+	"apiPass": "<your-gdax-api-password>"
+}
